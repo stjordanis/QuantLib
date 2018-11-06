@@ -333,7 +333,7 @@ test_suite* init_unit_test_suite(int, char* []) {
            << (settings.includeReferenceDateEvents()
                ? "reference date events are included,\n"
                : "reference date events are excluded,\n")
-           << (settings.includeTodaysCashFlows() == boost::none ?
+           << (!settings.includeTodaysCashFlows() ?
                "" : (*settings.includeTodaysCashFlows() ?
                      "today's cashflows are included,\n"
                      : "today's cashflows are excluded,\n"))

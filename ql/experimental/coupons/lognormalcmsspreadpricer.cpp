@@ -66,7 +66,7 @@ namespace QuantLib {
         privateObserver_ = ext::make_shared<PrivateObserver>(this);
         privateObserver_->registerWith(cmsPricer_);
 
-        if(volatilityType == boost::none) {
+        if(!volatilityType) {
             QL_REQUIRE(shift1 == Null<Real>() && shift2 == Null<Real>(),
                        "if volatility type is inherited, no shifts should be "
                        "specified");

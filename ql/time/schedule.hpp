@@ -182,7 +182,7 @@ namespace QuantLib {
     inline const Date &Schedule::endDate() const { return dates_.back(); }
 
     inline bool Schedule::hasTenor() const {
-        return tenor_ != boost::none;
+        return tenor_;
     }
 
     inline const Period& Schedule::tenor() const {
@@ -197,7 +197,7 @@ namespace QuantLib {
 
     inline bool
     Schedule::hasTerminationDateBusinessDayConvention() const {
-        return terminationDateConvention_ != boost::none;
+        return terminationDateConvention_;
     }
 
     inline BusinessDayConvention
@@ -208,7 +208,7 @@ namespace QuantLib {
     }
 
     inline bool Schedule::hasRule() const {
-        return rule_ != boost::none;
+        return rule_;
     }
 
     inline DateGeneration::Rule Schedule::rule() const {
@@ -217,7 +217,7 @@ namespace QuantLib {
     }
 
     inline bool Schedule::hasEndOfMonth() const {
-        return endOfMonth_ != boost::none;
+        return endOfMonth_;
     }
 
     inline bool Schedule::endOfMonth() const {

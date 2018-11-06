@@ -84,7 +84,7 @@ namespace QuantLib {
       rule_(rule),
       dates_(dates), isRegular_(isRegular) {
 
-        if (tenor != boost::none && !allowsEndOfMonth(*tenor))
+        if (tenor && !allowsEndOfMonth(*tenor))
             endOfMonth_ = false;
         else
             endOfMonth_ = endOfMonth;
